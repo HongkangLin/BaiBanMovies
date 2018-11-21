@@ -1,3 +1,85 @@
 <view class="group">
-    index页面
+    <!-- 导入模板 -->
+    <import src="/templates/header.swan" />
+
+    <template is="header" />
+
+    <!-- 影院热映 -->
+    <view class="hotMovies">
+        <view class="title">
+            <text class="sectionTitle">影院热映</text>
+            <navigator  class="more">更多</navigator>
+        </view>
+        <scroll-view scroll-x class="scroll-view">
+            <view class="item" s-for="{{hotMovieList}}" s-for-index="idx" s-for-item="i">
+                <navigator class="navigator">
+                    <image src="{{i.images.small}}" class="image"/>
+                
+                    <view class="movieName">{{i.title}}</view>
+
+                    <text s-if="{{i.rating.average==0}}" class="no-score">暂无评分</text>
+                    <view s-else class="star-box">
+                        <block s-for="{{i.starArr}}" s-for-item="it">
+                            <image class="image" s-if="{{it==1}}" src="../../images/full.png" />
+                            <image class="image" s-elif="{{it==3}}" src="../../images/halfStar.jpg" />
+                            <image class="image" s-else src="../../images/empty.png" />
+                        </block>
+                        {{i.rating.average}}
+                    </view>
+                </navigator>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- top250 -->
+    <view class="top250">
+        <view class="title">
+            <text class="sectionTitle">Top250</text>
+            <navigator  class="more">更多</navigator>
+        </view>
+        <scroll-view scroll-x class="scroll-view">
+            <view class="item" s-for="{{top250}}" s-for-index="idx" s-for-item="i">
+                <navigator class="navigator">
+                    <image src="{{i.images.small}}" class="image"/>
+                
+                    <view class="movieName">{{i.title}}</view>
+
+                    <text s-if="{{i.rating.average==0}}" class="no-score">暂无评分</text>
+                    <view s-else class="star-box">
+                        <block s-for="{{i.starArr}}" s-for-item="it">
+                            <image class="image" s-if="{{it==1}}" src="../../images/full.png" />
+                            <image class="image" s-elif="{{it==3}}" src="../../images/halfStar.jpg" />
+                            <image class="image" s-else src="../../images/empty.png" />
+                        </block>
+                        {{i.rating.average}}
+                    </view>
+                </navigator>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 即将上映 -->
+    <view class="commingSoon">
+        <view class="title">
+            <text class="sectionTitle">即将上映</text>
+            <navigator  class="more">更多</navigator>
+        </view>
+        <scroll-view scroll-x class="scroll-view">
+            <view class="item" s-for="{{commingSoon}}" s-for-index="idx" s-for-item="i">
+                <navigator class="navigator">
+                    <image src="{{i.images.small}}" class="image"/>
+                
+                    <view class="movieName">{{i.title}}</view>
+
+                    <text s-if="{{i.rating.average==0}}" class="no-score">暂无评分</text>
+                    <view s-else class="star-box">
+                        <block s-for="{{i.starArr}}" s-for-item="it">
+                            <image class="image" s-if="{{it==1}}" src="../../images/full.png" />
+                            <image class="image" s-elif="{{it==3}}" src="../../images/halfStar.jpg" />
+                            <image class="image" s-else src="../../images/empty.png" />
+                        </block>
+                        {{i.rating.average}}
+                    </view>
+                </navigator>
+            </view>
+        </scroll-view>
+    </view>
 </view>

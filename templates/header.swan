@@ -1,0 +1,14 @@
+<template name="header">
+    <view class="nav-box">
+        <navigator class="navigator">百瓣</navigator>
+        <view class="right">
+            <navigator class="navigator">电影</navigator>
+            <navigator class="navigator">图书</navigator>
+            <navigator class="navigator">广播</navigator>
+            <navigator class="navigator">小组</navigator>
+            <navigator class="navigator" >
+                <icon type="search" color="#43C74D" size="13" />
+            </navigator>
+        </view>
+    </view>
+</template>

@@ -1,5 +1,5 @@
 /**封装swan.request,实现链式调用
- * 
+ * @param options请求参数(为对象)
  */
 function myPro(options){
     return new Promise(function(resolve,reject){
@@ -24,7 +24,44 @@ function myPro(options){
     })
 }
 
+/**
+ * 星星算法
+ * @param average平均分
+ */
+function makeStar(average) {
+    
+    let starNum = average / 2;
+    let intNum = Math.floor(starNum);
+    let floatNum = starNum - intNum;
+
+    // 根据startNum计算出星星数组
+    let starArr = [];
+    for (let i = 0; i < 5; i++) {
+       
+        if (i < intNum) {
+            starArr[i] = 1;
+        } else if (i == intNum) {
+           
+            if (floatNum == 0) {
+                starArr[i] = 2;
+            } else if (floatNum < .5) {
+                
+                starArr[i] = 3
+            } else {
+                starArr[i] = 1;
+            }
+            
+        } else {
+            
+            starArr[i] = 2;
+        }
+    }
+    // 返回星星数组
+    return starArr;
+}
+
 module.exports={
-    baseUrl: 'https://douban.uieee.com/v2',
-    myPro
+    baseUrl: 'https://douban.uieee.com/v2/',
+    myPro,
+    makeStar
 }

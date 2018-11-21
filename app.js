@@ -1,12 +1,11 @@
 /* globals App */
-
 App({
     onLaunch(event) {
-        console.log('onLaunch');
+        // console.log('onLaunch');
     },
 
     onShow(event) {
-        console.log('onShow');
+        // console.log('onShow');
     },
 
     globalData: {
