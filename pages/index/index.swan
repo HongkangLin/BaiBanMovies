@@ -11,7 +11,7 @@
         </view>
         <scroll-view scroll-x class="scroll-view">
             <view class="item" s-for="{{hotMovieList}}" s-for-index="idx" s-for-item="i">
-                <navigator class="navigator">
+                <navigator class="navigator" url="/pages/detail/detail?id={{i.id}}">
                     <image src="{{i.images.small}}" class="image"/>
                 
                     <view class="movieName">{{i.title}}</view>
@@ -37,7 +37,7 @@
         </view>
         <scroll-view scroll-x class="scroll-view">
             <view class="item" s-for="{{top250}}" s-for-index="idx" s-for-item="i">
-                <navigator class="navigator">
+                <navigator class="navigator" url="/pages/detail/detail?id={{i.id}}">
                     <image src="{{i.images.small}}" class="image"/>
                 
                     <view class="movieName">{{i.title}}</view>
@@ -63,7 +63,7 @@
         </view>
         <scroll-view scroll-x class="scroll-view">
             <view class="item" s-for="{{commingSoon}}" s-for-index="idx" s-for-item="i">
-                <navigator class="navigator">
+                <navigator class="navigator" url="/pages/detail/detail?id={{i.id}}">
                     <image src="{{i.images.small}}" class="image"/>
                 
                     <view class="movieName">{{i.title}}</view>

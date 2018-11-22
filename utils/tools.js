@@ -61,6 +61,7 @@ function makeStar(average) {
 }
 
 module.exports={
+    // baseUrl: "https://www.autumnfish.cn/v2",
     baseUrl: 'https://douban.uieee.com/v2/',
     myPro,
     makeStar

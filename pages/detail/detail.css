@@ -1,0 +1,262 @@
+/* 电影信息 */
+.info-box {
+    padding-left: 37rpx;
+    padding-right: 37rpx;
+    padding-top: 70rpx;
+}
+
+.info-box .title {
+    display: block;
+    font-size: 46rpx;
+    margin-bottom: 30rpx;
+    font-weight: 500;
+    padding: 0;
+}
+
+.info-box .flex-box {
+    display: flex;
+}
+
+.info-box .left {
+    flex: 1;
+}
+
+.info-box .left .top {
+    display: flex;
+    font-size: 30rpx;
+}
+
+.info-box .left .score {
+    margin-left: 20rpx;
+}
+
+.info-box .left .comments {
+    margin-left: 20rpx;
+    color: #ccc;
+}
+
+.info-box .left .bottom {
+    padding-top: 50rpx;
+    font-size: 27rpx;
+    color: gray;
+}
+
+.info-box .right {
+    margin-left: 55rpx;
+}
+
+.info-box .right .poster {
+    width: 200rpx;
+    height: 280rpx;
+    display: block;
+}
+
+/* 按钮盒子 */
+.view-button {
+    display: flex;
+    margin-top: 60rpx;
+    margin-bottom: 68rpx;
+    padding: 0 36rpx;
+}
+
+.view-button view:first-child {
+    margin-right: 20rpx;
+}
+
+.view-button view {
+    width: 326rpx;
+    height: 60rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border: 2rpx solid #FFB816;
+    color: #FFB816;
+    font-size: 32rpx;
+    border-radius: 10rpx;
+
+}
+
+/* 频道区域 */
+.channel-box {
+    padding-left: 36rpx;
+}
+
+.channel-box .title {
+    color: gray;
+    font-size: 30rpx;
+    padding: 0;
+}
+
+.channel-box .tag-box {
+    margin-top: 34rpx;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.channel-box .tag-box view {
+    height: 54rpx;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    box-sizing: border-box;
+    border-radius: 27rpx;
+    background-color: #EFFAF0;
+    margin-right: 20rpx;
+    color: #54C366;
+    border: 2rpx solid #54C366;
+    font-size: 28rpx;
+    line-height: 54rpx;
+    margin-bottom: 20rpx;
+}
+
+.channel-box .tag-box view image {
+    width: 15rpx;
+    height: 19rpx;
+}
+
+/* 简介区域 */
+.movie-desc {
+    margin-top: 90rpx;
+    padding-left: 36rpx;
+}
+
+.movie-desc .title {
+    color: grey;
+    font-size: 30rpx;
+    padding: 0;
+}
+
+.movie-desc .desc {
+    margin-top: 30rpx;
+    font-size: 30rpx;
+}
+
+.movie-desc .desc .more {
+    color: orange;
+    display: inline;
+}
+
+.movie-desc .desc .cut {
+    display: inline;
+    color: yellowgreen;
+
+}
+
+/* 影人 */
+.movie-desc scroll-view {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 32rpx;
+}
+
+.movie-desc scroll-view .item {
+    display: inline-block;
+    width: 150rpx;
+    margin-right: 14rpx;
+}
+
+.movie-desc scroll-view .item image {
+    height: 214rpx;
+    width: 100%;
+    display: block;
+}
+
+.movie-desc scroll-view .item text {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.movie-desc scroll-view .item text.name {
+    font-size: 30rpx;
+    margin-top: 22rpx;
+}
+
+.movie-desc scroll-view .item text.job {
+    font-size: 26rpx;
+    margin-top: 26rpx;
+    color: grey;
+}
+
+/* 视频样式 */
+.movie-desc{
+    margin: 10rpx;
+}
+
+.movie-desc scroll-view .video-item {
+    display: inline-block;
+    width: 427rpx;
+    height: 242rpx;
+    margin-right: 14rpx;
+}
+
+.movie-desc scroll-view .video-item video{
+    width: 100%;
+    height: 100%;
+} 
+
+.movie-desc .title.small{
+    font-size:30rpx;
+}
+
+/* 评论布局 */
+.comment-box .title{
+    font-size:30rpx;
+    color:grey;
+    margin-bottom: 30rpx;
+    margin-top: 30rpx;
+}
+
+.comment-box .section{
+    display: flex;
+    margin-bottom: 80rpx;
+}
+
+.comment-box .section .left{
+    width: 120rpx;
+    position: relative;
+}
+
+.comment-box .section .left image{
+    width: 74rpx;
+    height: 74rpx;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.comment-box .section .right {
+    flex:1;
+    padding-right: 66rpx;
+    padding-top: 10rpx;
+}
+
+.comment-box .section .right .name{
+    font-size:30rpx;
+    padding-left: 20rpx;
+    font-weight: 700;
+}
+
+.comment-box .section .right .time{
+    margin-top: 24rpx;
+    font-size:25rpx;
+    color:#ccc;
+    padding-left: 20rpx;
+}
+
+.comment-box .section .right .content{
+    margin-top: 32rpx;
+    font-size:30rpx;
+}
+
+.comment-box .section .right .good{
+    margin-top: 32rpx;
+    display: flex;
+    justify-content: space-between;
+    color:#ccc;
+    font-size:30rpx;
+}
+

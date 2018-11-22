@@ -1,0 +1,125 @@
+<view class="group">
+    <!-- 导入模板 -->
+    <import src="/templates/header.swan" />
+    <template is="header" />
+
+    <!-- 电影信息 -->
+    <view class="info-box">
+        <text class="title">{{movieInfo.title}}</text>
+        <view class="flex-box">
+            <view class="left">
+                <view class="top">
+                    <text s-if="{{movieInfo.rating.average==0}}" class="no-score">暂无评分</text>
+                    <view s-else class="star-box">
+                        <block s-for="{{movieInfo.starArr}}">
+                            <image class="image" s-if="{{item==1}}" src="../../images/full.png" />
+                            <image class="image" s-elif="{{item==3}}" src="../../images/halfStar.jpg" />
+                            <image class="image" s-else src="../../images/empty.png" />
+                        </block>
+                    </view>
+                    <text class="score">{{movieInfo.rating.average}}</text>
+                    <text class="comments">{{movieInfo.ratings_count}}人评价</text>
+                </view>
+                <!-- bottom -->
+                <view class="bottom">
+                    {{movieInfo.durations[0]}} /
+                    <block s-for="{{movieInfo.genres}}">{{item}} /</block>
+                    {{movieInfo.directors[0].name}}(导演) /
+                    <block s-for="{{movieInfo.casts}}">{{item.name}} /</block>
+                    {{movieInfo.pubdates[0]}} 上映
+                </view>
+            </view>
+            <view class="right">
+                <image src="{{movieInfo.images.small}}" class="poster"/>
+            </view>
+        </view>
+    </view>
+
+    <!-- 是否想看按键 -->
+    <view class="view-button">
+        <view>想看</view>
+        <view>看过</view>
+    </view>
+
+    <!-- 所属频道 -->
+    <view class="channel-box">
+        <view class="title">所属频道</view>
+        <view class="tag-box">
+            <view s-for="{{movieInfo.tags}}">
+                {{item}}
+                <image src="../../images/green_arrow.png" />
+            </view>
+        </view>
+    </view>
+
+    <!-- 简介 -->
+    <view class="movie-desc">
+        <view class="title">{{movieInfo.title}}的剧情简介</view>
+        <view class="desc">
+            {{cutSummary}}
+            <view s-if="{{cutSummary.length<70}}" bindtap="more" class="more">(更多)</view>
+            <view s-if="{{cutSummary.length>=70}}" bindtap="cut" class="cut">(收起)</view>
+        </view>
+    </view>
+
+    <!-- 影人 -->
+    <view class="movie-desc">
+        <view class="title">影人</view>
+       
+        <scroll-view scroll-x>
+            <view class="item">
+                <image src="{{movieInfo.directors[0].avatars.small}}"></image>
+                <text class='name'>{{movieInfo.directors[0].name}}</text>
+                <text class="job">导演</text>
+            </view>
+            <view s-for="{{movieInfo.casts}}" class="item">
+                <image src="{{item.avatars.small}}"></image>
+                <text class='name'>{{item.name}}</text>
+                <text class="job">演员</text>
+            </view>
+        </scroll-view>
+    </view>
+
+    <!-- 预告片 -->
+    <view class="movie-desc">
+        <view class="title small">
+            {{movieInfo.title}}的预告片({{movieInfo.trailers.length}})、视频评论(1)和图片({{movieInfo.photos_count}})
+        </view>
+       
+        <scroll-view scroll-x>
+            <view s-for="{{movieInfo.trailers}}" class="video-item">
+                <video src="https://crazynote.v.netease.com/2018/1114/6ef1ea61dfceb3246c6990e1487b2101qt.mp4" controls></video>
+            </view>
+        </scroll-view>
+    </view>
+
+    <!-- 评论布局 -->
+    <view class="comment-box">
+        <view class="title">{{movieInfo.title}}的短评 ({{movieInfo.comments_count}})</view>
+        <view s-for="{{movieInfo.popular_comments}}" class="section">
+            <view class="left">
+                <image src="{{item.author.avatar}}"></image>
+            </view>
+            <view class="right">
+                <view class="name">
+                    {{item.author.name}}
+                </view>
+                <view class="time">
+                    {{item.created_at}}
+                </view>
+                <view class="content">
+                    {{item.content}}
+                </view>
+                <view class="good">
+                    <view class="good-left">
+                        👍 &nbsp;&nbsp;{{item.useful_count}}
+                    </view>
+                    <view class="good-right">
+                        ...
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+</view>

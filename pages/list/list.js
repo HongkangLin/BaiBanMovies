@@ -123,7 +123,7 @@ Page({
         
     },
 
-    onPullDownRefresh: function () {
+    onPullDownRefresh(){
         
         this.setData({
           startIndex: 0,
