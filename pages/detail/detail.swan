@@ -88,7 +88,7 @@
        
         <scroll-view scroll-x>
             <view s-for="{{movieInfo.trailers}}" class="video-item">
-                <video src="https://crazynote.v.netease.com/2018/1114/6ef1ea61dfceb3246c6990e1487b2101qt.mp4" controls></video>
+                <video src="https://crazynote.v.netease.com/2018/1114/6ef1ea61dfceb3246c6990e1487b2101qt.mp4" controls poster="../../images/videoCoverPic.jpg"></video>
             </view>
         </scroll-view>
     </view>
