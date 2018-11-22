@@ -1,0 +1,38 @@
+<view class="group">
+    <!-- 顶部的搜索盒子 -->
+    <view class="search-box">
+        <navigator url="/pages/index/index" class="close">关闭</navigator>
+        <input type="text" bindconfirm="search"/>
+        <icon type="search" color="#ccc"/>
+    </view>
+    <!-- 分类的列表 -->
+    <view s-if="{{movieList.length==0}}" class="list-box">
+        <view s-for="{{myDataList}}" class="item">
+            <view style="color:{{item.color}}">{{item.title}}</view>
+            <view>{{item.subTitle}}</view>
+        </view>
+    </view>
+    <!-- 搜索的结果 -->
+    <view class="search-result" s-else>
+        <view class="item" s-for="{{movieList}}">
+            <view class="left">
+                <navigator class="navigator" url="/pages/detail/detail?id={{item.id}}">
+                    <image src="{{item.images.small}}"></image>
+                </navigator>
+            </view>
+            <view class="right">
+                <view class="title">{{item.title}}</view>
+                <!-- 星星盒子 -->
+                <text s-if="{{item.rating.average==0}}" class="no-score">暂无评分</text>
+                <view s-else class="star-box">
+                    <block s-for="{{item.starArr}}">
+                        <image class="image" s-if="{{item==1}}" src="../../images/full.png" />
+                        <image class="image" s-elif="{{item==3}}" src="../../images/halfStar.jpg" />
+                        <image class="image" s-else src="../../images/empty.png" />
+                    </block>
+                    <text>{{item.rating.average}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
