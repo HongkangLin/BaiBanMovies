@@ -1,0 +1,28 @@
+<view class="group">
+    <!-- 导入模板 -->
+    <import src="/templates/header.swan" />
+    <template is="header" />
+
+    <view class="list-box">
+        <text class="listName">{{listName}}</text>
+        <view class="items">
+            <view class="item" s-for="{{movieList}}">
+                <navigator url="/pages/detail/detail?id={{item.id}}" class="navigator">
+                    <image src="{{item.images.small}}" class="image poster"/>
+                    <view class="movieName">{{item.title}}</view>
+                    <!-- 星星区域 -->
+                    <text s-if="{{item.rating.average==0}}" class="no-score">暂无评分</text>
+                    <view s-else class="star-box">
+                        <block s-for="{{item.starArr}}" s-for-item="it">
+                            <image class="image" s-if="{{it==1}}" src="../../images/full.png" />
+                            <image class="image" s-elif="{{it==3}}"src="../../images/halfStar.jpg" />
+                            <image class="image" s-else src="../../images/empty.png" />
+                        </block>
+                        {{item.rating.average}}
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+
+</view>

@@ -1,0 +1,15 @@
+.list-box .item{
+    margin-bottom: 50rpx;
+}
+
+.list-box >.listName{
+    display: block;
+    height: 140rpx;
+    font-size:54rpx;
+    padding-left: 60rpx;
+    line-height: 140rpx;
+}
+
+.list-box .items{
+    text-align: center;
+}

@@ -1,14 +1,13 @@
 <view class="group">
     <!-- 导入模板 -->
     <import src="/templates/header.swan" />
-
     <template is="header" />
 
     <!-- 影院热映 -->
     <view class="hotMovies">
         <view class="title">
             <text class="sectionTitle">影院热映</text>
-            <navigator  class="more">更多</navigator>
+            <navigator class="more" url="/pages/list/list?tag=in_theaters">更多</navigator>
         </view>
         <scroll-view scroll-x class="scroll-view">
             <view class="item" s-for="{{hotMovieList}}" s-for-index="idx" s-for-item="i">
@@ -34,7 +33,7 @@
     <view class="top250">
         <view class="title">
             <text class="sectionTitle">Top250</text>
-            <navigator  class="more">更多</navigator>
+            <navigator class="more" url="/pages/list/list?tag=top250">更多</navigator>
         </view>
         <scroll-view scroll-x class="scroll-view">
             <view class="item" s-for="{{top250}}" s-for-index="idx" s-for-item="i">
@@ -60,7 +59,7 @@
     <view class="commingSoon">
         <view class="title">
             <text class="sectionTitle">即将上映</text>
-            <navigator  class="more">更多</navigator>
+            <navigator class="more" url="/pages/list/list?tag=coming_soon">更多</navigator>
         </view>
         <scroll-view scroll-x class="scroll-view">
             <view class="item" s-for="{{commingSoon}}" s-for-index="idx" s-for-item="i">

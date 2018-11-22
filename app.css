@@ -1,10 +1,10 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* templates/header的样式 */
+.group{
+    padding-top: 100rpx;
+}
+
 .nav-box {
     height: 100rpx;
     display: flex;
@@ -14,6 +14,12 @@
     padding: 0 40rpx;
     background-color: white;
     box-sizing: border-box;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 998;
 }
 
 .nav-box>.navigator {
@@ -78,6 +84,7 @@
     display: inline-block;
     margin-right: 15rpx;
     text-align: center;
+    height: 364rpx;
 }
 
 .item .image{
@@ -99,12 +106,12 @@
     display: flex;
     font-size: 26rpx;
     justify-content: center;
-    padding-top: 10rpx;
+    margin-top: 4rpx;
 }
 
 .no-score{
-    font-size:27rpx;
-    color:#ccc;
+    font-size:26rpx;
+    color:grey;
     padding-top: 10rpx;
     box-sizing: content-box;
 }
@@ -114,7 +121,3 @@
     height: 26rpx;
 }
 
-.star-box {
-    color:gray;
-    font-size:20rpx;
-}

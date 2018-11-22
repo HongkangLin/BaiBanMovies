@@ -1,0 +1,5 @@
+{
+    "navigationBarTitleText": "百瓣电影列表",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 50
+}
