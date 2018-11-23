@@ -4,8 +4,8 @@
         <view class="right">
             <navigator class="navigator" url="/pages/index/index">电影</navigator>
             <navigator class="navigator" url="/pages/books/books">图书</navigator>
-            <navigator class="navigator">广播</navigator>
-            <navigator class="navigator">小组</navigator>
+            <navigator class="navigator" url="/pages/broadcast/broadcast">广播</navigator>
+            <navigator class="navigator" url="/pages/group/group">小组</navigator>
             <navigator class="navigator" url="/pages/search/search">
                 <icon type="search" color="#43C74D" size="13" />
             </navigator>

@@ -1,0 +1,7 @@
+<view class="group">
+    <!-- 导入模板 -->
+    <import src="/templates/header.swan" />
+    <template is="header" />
+
+    <image src="../../images/group.jpg" mode="widthFix" binderror="" bindload=""></image>
+</view>
