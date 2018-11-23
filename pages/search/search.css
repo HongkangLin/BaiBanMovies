@@ -64,6 +64,7 @@
 /* 搜索结果盒子 */
 .search-result {
     padding-left: 36rpx;
+    padding-top: 40rpx;
 }
 
 .search-result .item {
@@ -87,7 +88,6 @@
     display: block;
     width: 100%;
     height: 100%;
-
 }
 
 .search-result .item .right .title {
@@ -97,4 +97,10 @@
 
 .search-result .item .right>text {
     color: gray;
+    padding-left: 40rpx;
+}
+
+.search-result .item .right .star-box{
+    text-align: left;
+    padding-left: 40rpx;
 }
