@@ -4,7 +4,8 @@
         "pages/index/index",
         "pages/list/list",
         "pages/detail/detail",
-        "pages/search/search"
+        "pages/search/search",
+        "pages/books/books"
     ],
     "window": {
         "navigationBarBackgroundColor": "#ffffff",
